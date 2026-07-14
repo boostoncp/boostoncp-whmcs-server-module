@@ -8,8 +8,14 @@ An official provisioning module for **BoostonCP** that automates hosting account
 
 ---
 
-### 🌐 Official Links & Community
-[Official Website](https://boostoncp.com) | [Documentation](https://boostoncp.com/docs) | [Tutorials](https://boostoncp.com/tutorials) | [Blog](https://boostoncp.com/blog) | [Contact Us](https://boostoncp.com/contact) | [Community Portal](https://boostoncp.com/community) | [Facebook Page](https://www.facebook.com/boostoncp) | [Facebook Group](https://www.facebook.com/groups/boostoncp.community)
+### 🌐 Official Resources & Channels
+
+| 🌐 Brand Resources | 👥 Community & Socials |
+| :--- | :--- |
+| 🔗 **[Official Website](https://boostoncp.com)** | 📢 **[Facebook Page](https://www.facebook.com/boostoncp)** |
+| 📚 **[Documentation](https://boostoncp.com/docs)** | 👥 **[Community Group](https://www.facebook.com/groups/boostoncp.community)** |
+| 🎓 **[Video Tutorials](https://boostoncp.com/tutorials)** | 💬 **[Discussion Portal](https://boostoncp.com/community)** |
+| ✍️ **[Official Blog](https://boostoncp.com/blog)** | 📞 **[Contact Support](https://boostoncp.com/contact)** |
 
 ---
 
