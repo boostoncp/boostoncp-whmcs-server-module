@@ -8,6 +8,11 @@ An official provisioning module for **BoostonCP** that automates hosting account
 
 ---
 
+### 🌐 Official Links & Community
+[Official Website](https://boostoncp.com) | [Documentation](https://boostoncp.com/docs) | [Tutorials](https://boostoncp.com/tutorials) | [Blog](https://boostoncp.com/blog) | [Contact Us](https://boostoncp.com/contact) | [Community Portal](https://boostoncp.com/community) | [Facebook Page](https://www.facebook.com/boostoncp) | [Facebook Group](https://www.facebook.com/groups/boostoncp.community)
+
+---
+
 ## Key Features
 
 - **Automated Provisioning:** Instant account setup upon payment clearance.
