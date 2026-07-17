@@ -36,12 +36,14 @@ To maintain the standard WHMCS ecosystem design, upload the files according to t
 
 ```text
 whmcs_root/
+├── includes/
+│   └── hooks/
+│       └── boostoncp_hooks.php        # Global hooks (Admin SSO button injection & config auto-fill)
 └── modules/
     └── servers/
         └── boostoncp/
             ├── boostoncp.php             # Main provisioning hooks & API connector
             ├── hooks.php                  # Automation event handlers
-            ├── boostoncp_hooks.php        # Core resource sync hooks
             ├── redirect.php               # Client SSO portal redirect handler
             ├── premium_blue_design.tpl    # Premium Blue client area layout
             ├── alien_neon_design.tpl      # Interstellar Neon client area layout
@@ -54,7 +56,7 @@ whmcs_root/
 
 ### 1. Upload Module Files
 1. Download the latest release `.zip` archive from the releases page.
-2. Extract the archive and copy the `modules/` folder into your WHMCS root directory (e.g. `/public_html/billing/`).
+2. Extract the archive and copy the `includes/` and `modules/` folders into your WHMCS root directory (e.g. `/public_html/billing/`).
 
 ### 2. Configure the Server in WHMCS
 1. Log in to your WHMCS Admin Area.
