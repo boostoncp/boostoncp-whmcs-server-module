@@ -16,10 +16,27 @@ $service = Capsule::table('tblhosting')
     ->join('tblproducts', 'tblhosting.packageid', '=', 'tblproducts.id')
     ->join('tblservers', 'tblhosting.server', '=', 'tblservers.id')
     ->where('tblhosting.id', $id)
-    ->select('tblhosting.username', 'tblservers.ipaddress', 'tblservers.hostname', 'tblservers.accesshash', 'tblservers.secure', 'tblservers.port')
+    ->select('tblhosting.userid', 'tblhosting.username', 'tblservers.ipaddress', 'tblservers.hostname', 'tblservers.accesshash', 'tblservers.secure', 'tblservers.port')
     ->first();
 
 if (!$service) die("Service not found.");
+
+// Authentication & Authorization Check
+$adminId = $_SESSION['adminid'] ?? 0;
+$clientId = $_SESSION['uid'] ?? 0;
+
+if ($type === 'admin') {
+    // Master admin access requires active admin session
+    if (!$adminId) {
+        die("Unauthorized access: WHMCS Admin session required.");
+    }
+} else {
+    // User login requires ownership OR admin login
+    $isOwner = ((int)$service->userid === (int)$clientId);
+    if (!$isOwner && !$adminId) {
+        die("Unauthorized access: You do not have permission to access this service.");
+    }
+}
 
 // Prepare API Call
 $host = $service->hostname ? $service->hostname : $service->ipaddress;

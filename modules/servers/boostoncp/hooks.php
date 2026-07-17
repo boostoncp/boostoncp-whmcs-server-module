@@ -6,13 +6,25 @@
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 add_hook('AdminAreaFooterOutput', 1, function($vars) {
-    // Only target the specific service details page in Admin
-    if (!isset($_REQUEST['id']) || strpos($_SERVER['SCRIPT_NAME'], 'clientsservices.php') === false) {
-        return '';
+    $serviceId = 0;
+    if (isset($_REQUEST['id']) && $_REQUEST['id'] > 0) {
+        $serviceId = (int)$_REQUEST['id'];
+    } elseif (isset($_REQUEST['userid']) && $_REQUEST['userid'] > 0) {
+        $userId = (int)$_REQUEST['userid'];
+        try {
+            $firstService = Capsule::table('tblhosting')
+                ->where('userid', $userId)
+                ->orderBy('id', 'asc')
+                ->first();
+            if ($firstService) {
+                $serviceId = $firstService->id;
+            }
+        } catch (\Exception $e) {}
     }
 
-    $serviceId = (int)$_REQUEST['id'];
-    if (!$serviceId) return '';
+    if (!$serviceId || strpos($_SERVER['SCRIPT_NAME'], 'clientsservices.php') === false) {
+        return '';
+    }
 
     // Verify BoostonCP service using Capsule
     try {
