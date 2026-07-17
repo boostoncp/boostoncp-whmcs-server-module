@@ -1,7 +1,7 @@
 <?php
 /**
  * BoostonCP WHMCS Server Module
- * Version: 1.6.5 (Stable)
+ * Version: 1.6.6 (Stable)
  */
 
 if (!defined("WHMCS")) {

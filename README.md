@@ -1,6 +1,6 @@
 # BoostonCP WHMCS Provisioning Module
 
-[![Version](https://img.shields.io/badge/version-1.6.5-blue.svg)](https://github.com/BoostonCP/whmcs-module/releases)
+[![Version](https://img.shields.io/badge/version-1.6.6-blue.svg)](https://github.com/BoostonCP/whmcs-module/releases)
 [![WHMCS Compatibility](https://img.shields.io/badge/whmcs-v8.x%20--%20v9.x-green.svg)](https://whmcs.com)
 [![License](https://img.shields.io/badge/license-GPL--3.0-orange.svg)](LICENSE)
 
